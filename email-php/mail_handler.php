@@ -30,8 +30,11 @@ $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 $headers2 = "From:" . $mailto;
 $message = "<html><body>$body</body></html>";
 
-if (mail($mailto, $subject, $message, $headers)) {
-    echo "$success"; // success
-} else {
-    echo "$error"; // failure
+if ($_POST['submit-data']) {
+    if (mail($mailto, $subject, $message, $headers)) {
+        echo "$success"; // success
+    } else {
+        echo "$error"; // failure
+    }
 }
+?>
