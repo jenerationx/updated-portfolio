@@ -1,7 +1,7 @@
 <?php
 
 /* Replace with your email address here */
-$mailto  = 'jenny@sewmuchrun.com';
+$mailto  = "jenny@sewmuchrun.com";
 
 
 $name     	= strip_tags($_POST['name']);
