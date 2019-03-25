@@ -6,7 +6,7 @@ $mailto  = "jenny@sewmuchrun.com";
 
 $name     	= strip_tags($_POST['name']);
 $sub     	= strip_tags($_POST['subject']);
-$email      = strip_tags($_POST['email']);
+$email      = "jenny@sewmuchrun.com";
 $message    = strip_tags($_POST['message']);
 
 $subject = "Github Portfolio Message | Resume";
@@ -30,11 +30,9 @@ $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 $headers2 = "From:" . $mailto;
 $message = "<html><body>$body</body></html>";
 
-if ($_POST['submit-data']) {
-    if (mail($mailto, $subject, $message, $headers)) {
-        echo "$success"; // success
-    } else {
-        echo "$error"; // failure
-    }
+if (mail($mailto, $subject, $message, $headers)) {
+    echo "$success"; // success
+} else {
+    echo "$error"; // failure
 }
 ?>
