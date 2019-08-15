@@ -214,8 +214,8 @@
             var post_data = form.serialize(); //Serialized the form data
 
             $.ajax({
-                    type: 'POST',
-                    url: 'email-php/mail_handler.php', // Form script
+                    // type: 'POST',
+                    // url: 'email-php/mail_handler.php', // Form script
                     data: post_data
                 })
                 .done(function () {
