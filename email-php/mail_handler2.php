@@ -13,9 +13,9 @@ $subject = "Github Portfolio Message | Resume";
 
 // HTML for email to send submission details
 $body = "
-<p><b>Name</b>: $name <br></p>
-<p><b>Email</b>: $email<br></p>
-<p><b>Subject</b>: $sub <br></p>
+<p><b>Name</b>: $name <br>
+<b>Email</b>: $email<br>
+<p><b>Subject</b>: $sub <br>
 <p><b>Message</b>: $message</p>
 ";
 
@@ -35,3 +35,4 @@ if (mail($mailto, $subject, $message, $headers)) {
 } else {
     echo "$error"; // failure
 }
+?>
